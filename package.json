@@ -1,0 +1,20 @@
+{
+  "name": "agri-logistix",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fleet management and spoilage monitoring prototype for perishable goods",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently -k \"npm run dev --workspace backend\" \"npm run dev --workspace frontend\"",
+    "start": "npm run start --workspace backend",
+    "simulate": "npm run simulate --workspace backend",
+    "seed": "npm run seed --workspace backend",
+    "test": "npm run test --workspace backend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
